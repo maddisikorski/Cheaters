@@ -123,6 +123,10 @@ string makeString(queue<string> words){
 int hashFunc(hashNode node, int tableSize){
     return ((node.chunk[0]) + (27 * node.chunk[1]) + (729 * node.chunk[2])) % tableSize;
 }
+/* return (node.chunk[0]%10);
+
+return node.chunk%tableSize;
+*/
 
 void insertHash(hashNode *hashTable[], int tableIndex, hashNode &node){
     if (hashTable[tableIndex] == NULL) {                        //if empty, add file node
